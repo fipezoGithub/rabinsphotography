@@ -3,21 +3,25 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -p 4000",
     "build": "next build",
-    "start": "next start",
+    "start": "next start -p 4000",
     "lint": "next lint"
   },
   "dependencies": {
+    "mongoose": "^8.0.2",
+    "next": "14.0.3",
+    "parse5": "^7.1.2",
     "react": "^18",
     "react-dom": "^18",
-    "next": "14.0.3"
+    "react-icons": "^4.12.0",
+    "react-simple-image-viewer": "^1.2.2"
   },
   "devDependencies": {
     "autoprefixer": "^10.0.1",
-    "postcss": "^8",
-    "tailwindcss": "^3.3.0",
     "eslint": "^8",
-    "eslint-config-next": "14.0.3"
+    "eslint-config-next": "14.0.3",
+    "postcss": "^8",
+    "tailwindcss": "^3.3.0"
   }
 }

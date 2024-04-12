@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -16,12 +18,80 @@
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
+.montserrat {
+  font-family: "Montserrat Alternates", sans-serif;
+}
+.gradient {
+  background: radial-gradient(
+    circle,
+    rgba(49, 24, 88, 1) 0%,
+    rgba(10, 9, 14, 1) 100%
+  );
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+input[type="file"]::file-selector-button {
+  margin-right: 20px;
+  font-size: 1.3vmax;
+  border: none;
+  background: rgb(150, 159, 170);
+  padding: 0.3vmax;
+  border-radius: 10px;
+  color: rgb(228, 233, 241);
+  cursor: pointer;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-143%);
+  }
+}
+
+.gradient-text {
   background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+    to right,
+    rgba(98, 155, 225, 1) 25%,
+    rgba(148, 106, 221, 1) 50%,
+    rgba(179, 107, 213, 1) 75%,
+    rgba(226, 44, 80, 1) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 500% auto;
+  -webkit-animation: textShine 3s ease-in-out infinite alternate;
+  animation: textShine 3s ease-in-out infinite alternate;
+}
+
+@keyframes textShine {
+  0% {
+    background-position: 0 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  /* background: rgba(207, 196, 224, 1); */
+  background: linear-gradient(
+    180deg,
+    rgba(207, 196, 224, 1) 0%,
+    rgba(253, 253, 253, 1) 50%,
+    rgba(207, 196, 224, 1) 100%
+  );
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(49, 24, 88, 1);
+  border-radius: 10px;
 }
