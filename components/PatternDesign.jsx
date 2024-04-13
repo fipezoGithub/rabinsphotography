@@ -1,5 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
+import Link from "next/link";
 import { FaAngleRight } from "react-icons/fa6";
 
 const PatternDesign = () => {
@@ -30,13 +31,13 @@ const PatternDesign = () => {
           photography Today! Preserve your cherished moments with our expert
           team.
         </p>
-        <button
-          type='button'
+        <Link
+          href='/contact-us'
           className='font-medium capitalize text-blue-600 text-[1.5vmax] flex items-center gap-1 group'
         >
           book now{" "}
           <FaAngleRight className='group-hover:translate-x-2 duration-500' />
-        </button>
+        </Link>
       </div>
     </>
   );

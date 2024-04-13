@@ -8,7 +8,7 @@ import { FaBuilding, FaLocationDot } from "react-icons/fa6";
 
 const berkshireSwash = Berkshire_Swash({ subsets: ["latin"], weight: "400" });
 
-export default async function PortfolioId() {
+export default async function FilmId() {
   const images = [
     "/_DSC4885.jpg",
     "/about-us-team.jpg",
@@ -18,6 +18,7 @@ export default async function PortfolioId() {
     "/team_player.jpg",
     "/45.jpg",
   ];
+
   return (
     <>
       <Navbar />
@@ -41,19 +42,19 @@ export default async function PortfolioId() {
             portfolio title
           </h1>
           <div className='flex items-center justify-center gap-8'>
-            <div className='flex items-center gap-2 text-[1.5vw]'>
+            <div className='flex items-center gap-2 text-[1.5vmax]'>
               <FaBuilding color='#ff4700' />
               <p className='capitalize text-neutral-800 font-semibold'>
                 venue name
               </p>
             </div>
-            <div className='flex items-center gap-2 text-[1.5vw]'>
+            <div className='flex items-center gap-2 text-[1.5vmax]'>
               <FaLocationDot color='#e60000' />
               <p className='capitalize text-neutral-800 font-semibold'>
                 location
               </p>
             </div>
-            <div className='flex items-center gap-2 text-[1.5vw]'>
+            <div className='flex items-center gap-2 text-[1.5vmax]'>
               <AiFillAppstore color='#0000FF' />
               <p className='capitalize text-neutral-800 font-semibold'>
                 event type

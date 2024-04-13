@@ -6,11 +6,11 @@ export default async function PrivacyPolicy() {
     <>
       <Navbar />
       <main className='bg-[linear-gradient(180deg,_rgba(207,196,224,1)_0%,_rgba(253,253,253,1)_50%,_rgba(207,196,224,1)_100%)] flex flex-col items-center justify-center'>
-        <header className='mt-16 py-16 flex flex-col items-center mx-8 gap-6'>
+        <header className='mt-16 py-8 sm:py-16 flex flex-col items-center mx-8 sm:gap-6'>
           <h1 className='text-[2.5vmax] font-semibold py-2 montserrat relative text-neutral-800'>
             Privacy Policies
           </h1>
-          <p className='py-2 text-[1.4vmax] w-[75vmax] text-center text-neutral-800'>
+          <p className='py-2 text-[1.4vmax] sm:w-[75vmax] text-center text-neutral-800'>
             At Rabin&apos;s Photography, accessible from, one of our main
             priorities is the privacy of our visitors. This Privacy Policy
             document contains types of information that is collected and
@@ -24,20 +24,20 @@ export default async function PrivacyPolicy() {
             website.
           </p>
         </header>
-        <section className='flex flex-col items-start mx-8 gap-2 my-4'>
+        <section className='flex flex-col items-start sm:mx-8 gap-2 my-4'>
           <h1 className='text-[2vmax] font-semibold montserrat relative text-neutral-800'>
             Consent
           </h1>
-          <p className='text-[1.4vmax] w-[75vmax] text-neutral-800'>
+          <p className='text-[1.4vmax] sm:w-[75vmax] text-neutral-800'>
             By using our website, you hereby consent to our Privacy Policy and
             agree to its terms.
           </p>
         </section>
-        <section className='flex flex-col items-start mx-8 gap-2 my-4'>
+        <section className='flex flex-col items-start sm:mx-8 gap-2 my-4 mx-4'>
           <h1 className='text-[2vmax] font-semibold montserrat relative text-neutral-800'>
             Information we collect
           </h1>
-          <p className='text-[1.4vmax] w-[75vmax] text-neutral-800'>
+          <p className='text-[1.4vmax] sm:w-[75vmax] text-neutral-800'>
             The personal information that you are asked to provide, and the
             reasons why you are asked to provide it, will be made clear to you
             at the point we ask you to provide your personal information. If you
@@ -50,11 +50,11 @@ export default async function PrivacyPolicy() {
             number.
           </p>
         </section>
-        <section className='flex flex-col items-start mx-8 gap-2 my-4'>
+        <section className='flex flex-col items-start sm:mx-8 gap-2 my-4 mx-4'>
           <h1 className='text-[2vmax] font-semibold montserrat relative text-neutral-800'>
             How we use your information
           </h1>
-          <p className='text-[1.4vmax] w-[75vmax] text-neutral-800 flex flex-col items-start gap-2'>
+          <p className='text-[1.4vmax] sm:w-[75vmax] text-neutral-800 flex flex-col items-start gap-2'>
             We use the information we collect in various ways, including to:
             <ul className='list-disc'>
               <li>Provide, operate, and maintain our webste</li>
@@ -74,11 +74,11 @@ export default async function PrivacyPolicy() {
             </ul>
           </p>
         </section>
-        <section className='flex flex-col items-start mx-8 gap-2 my-4'>
+        <section className='flex flex-col items-start sm:mx-8 gap-2 my-4 mx-4'>
           <h1 className='text-[2vmax] font-semibold montserrat relative text-neutral-800'>
             Log Files
           </h1>
-          <p className='text-[1.4vmax] w-[75vmax] text-neutral-800'>
+          <p className='text-[1.4vmax] sm:w-[75vmax] text-neutral-800'>
             Rabin&apos;s Photography follows a standard procedure of using log
             files. These files log visitors when they visit websites. All
             hosting companies do this and a part of hosting services&apos;
@@ -92,11 +92,11 @@ export default async function PrivacyPolicy() {
             demographic information.
           </p>
         </section>
-        <section className='flex flex-col items-start mx-8 gap-2 my-4'>
+        <section className='flex flex-col items-start sm:mx-8 gap-2 my-4 mx-4'>
           <h1 className='text-[2vmax] font-semibold montserrat relative text-neutral-800'>
             Cookies and Web Beacons
           </h1>
-          <p className='text-[1.4vmax] w-[75vmax] text-neutral-800'>
+          <p className='text-[1.4vmax] sm:w-[75vmax] text-neutral-800'>
             Like any other website, Rabin&apos;s Photography uses
             &apos;cookies&apos;. These cookies are used to store information
             including visitors&apos; preferences, and the pages on the website
@@ -106,11 +106,11 @@ export default async function PrivacyPolicy() {
             information.
           </p>
         </section>
-        <section className='flex flex-col items-start mx-8 gap-2 my-4'>
+        <section className='flex flex-col items-start sm:mx-8 gap-2 my-4 mx-4'>
           <h1 className='text-[2vmax] font-semibold montserrat relative text-neutral-800'>
             Advertising Partners Privacy Policies
           </h1>
-          <p className='text-[1.4vmax] w-[75vmax] text-neutral-800'>
+          <p className='text-[1.4vmax] sm:w-[75vmax] text-neutral-800'>
             You may consult this list to find the Privacy Policy for each of the
             advertising partners of Rabin&apos;s Photography. Third-party ad
             servers or ad networks uses technologies like cookies, JavaScript,
@@ -124,11 +124,11 @@ export default async function PrivacyPolicy() {
             these cookies that are used by third-party advertisers.
           </p>
         </section>
-        <section className='flex flex-col items-start mx-8 gap-2 my-4'>
+        <section className='flex flex-col items-start sm:mx-8 gap-2 my-4 mx-4'>
           <h1 className='text-[2vmax] font-semibold montserrat relative text-neutral-800'>
             Third Party Privacy Policies
           </h1>
-          <p className='text-[1.4vmax] w-[75vmax] text-neutral-800'>
+          <p className='text-[1.4vmax] sm:w-[75vmax] text-neutral-800'>
             Rabin&apos;s Photography Privacy Policy does not apply to other
             advertisers or websites. Thus, we are advising you to consult the
             respective Privacy Policies of these third-party ad servers for more
@@ -139,11 +139,11 @@ export default async function PrivacyPolicy() {
             browsers, it can be found at the browsers&apos; respective websites.
           </p>
         </section>
-        <section className='flex flex-col items-start mx-8 gap-2 my-4'>
+        <section className='flex flex-col items-start sm:mx-8 gap-2 my-4 mx-4'>
           <h1 className='text-[2vmax] font-semibold montserrat relative text-neutral-800'>
             CCPA Privacy Rights &#40;Do Not Sell My Personal Information&#41;
           </h1>
-          <p className='text-[1.4vmax] w-[75vmax] text-neutral-800'>
+          <p className='text-[1.4vmax] sm:w-[75vmax] text-neutral-800'>
             Under the CCPA, among other rights, California consumers have the
             right to: Request that a business that collects a consumer&apos;s
             personal data disclose the categories and specific pieces of
@@ -155,11 +155,11 @@ export default async function PrivacyPolicy() {
             you would like to exercise any of these rights, please contact us.
           </p>
         </section>
-        <section className='flex flex-col items-start mx-8 gap-2 my-4'>
+        <section className='flex flex-col items-start sm:mx-8 gap-2 my-4 mx-4'>
           <h1 className='text-[2vmax] font-semibold montserrat relative text-neutral-800'>
             GDPR Data Protection Rights
           </h1>
-          <p className='text-[1.4vmax] w-[75vmax] text-neutral-800'>
+          <p className='text-[1.4vmax] sm:w-[75vmax] text-neutral-800'>
             We would like to make sure you are fully aware of all of your data
             protection rights. Every user is entitled to the following: The
             right to access – You have the right to request copies of your
@@ -180,11 +180,11 @@ export default async function PrivacyPolicy() {
             like to exercise any of these rights, please contact us.
           </p>
         </section>
-        <section className='flex flex-col items-start mx-8 gap-2 my-4'>
+        <section className='flex flex-col items-start sm:mx-8 gap-2 my-4 mx-4'>
           <h1 className='text-[2vmax] font-semibold montserrat relative text-neutral-800'>
             Children&apos;s Information
           </h1>
-          <p className='text-[1.4vmax] w-[75vmax] text-neutral-800'>
+          <p className='text-[1.4vmax] sm:w-[75vmax] text-neutral-800'>
             Another part of our priority is adding protection for children while
             using the internet. We encourage parents and guardians to observe,
             participate in, and/or monitor and guide their online activity.

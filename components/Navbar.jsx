@@ -46,7 +46,7 @@ const Navbar = () => {
           <li className='flex items-center gap-1 text-[1.2vmax] capitalize group-hover/main:text-[#af89ee] group-hover/main:bg-[#141217] px-3 py-1 rounded-xl cursor-default'>
             services
           </li>
-          <div className='absolute top-full -left-0 -translate-x-1/2 bg-black px-8 py-4 invisible group-hover/main:visible flex items-start my-10 gap-4 transition-all origin-top-right opacity-0 group-hover/main:opacity-100 duration-700 rounded-lg '>
+          <div className='absolute top-full -left-0 -translate-x-1/2 bg-[linear-gradient(90deg,_rgba(53,0,110,1)_0%,_rgba(153,0,126,1)_40%,_rgba(204,1,126,1)_64%,_rgba(249,109,96,1)_100%)] px-8 py-4 invisible group-hover/main:visible flex items-start my-10 gap-4 transition-all origin-top-right opacity-0 group-hover/main:opacity-100 duration-700 rounded-lg '>
             <ul className='p-4 flex flex-col items-start gap-4 min-w-[17vmax] peer'>
               <li className='flex flex-col items-start relative'>
                 <Link
@@ -54,7 +54,7 @@ const Navbar = () => {
                   className='text-[1.4vmax] capitalize hover:text-orange-500 flex items-center gap-2 group'
                 >
                   weddings
-                  <span className='text-xs opacity-80 text-[#af89ee] uppercase border border-[#af89ee] px-1 py-px rounded flex items-center gap-1'>
+                  <span className='text-xs text-neutral-100 uppercase border border-neutral-100 px-1 py-px rounded flex items-center gap-1'>
                     sale{" "}
                     <GoArrowUpRight
                       size={"1.2em"}
@@ -62,7 +62,7 @@ const Navbar = () => {
                     />
                   </span>
                 </Link>
-                <p className='text-sm text-neutral-500'>
+                <p className='text-sm text-neutral-200'>
                   evrything about your speacial day
                 </p>
               </li>
@@ -72,7 +72,7 @@ const Navbar = () => {
                   className='text-[1.4vmax] capitalize hover:text-orange-500 flex items-center gap-2 group'
                 >
                   events{" "}
-                  <span className='text-xs opacity-80 text-[#af89ee] uppercase border border-[#af89ee] px-1 py-px rounded flex items-center gap-1'>
+                  <span className='text-xs text-neutral-100 uppercase border border-neutral-100 px-1 py-px rounded flex items-center gap-1'>
                     sale{" "}
                     <GoArrowUpRight
                       size={"1.2em"}
@@ -80,7 +80,7 @@ const Navbar = () => {
                     />
                   </span>
                 </Link>
-                <p className='text-sm text-neutral-500'>
+                <p className='text-sm text-neutral-200'>
                   evrything about your speacial day
                 </p>
               </li>
@@ -90,7 +90,7 @@ const Navbar = () => {
                   className='text-[1.4vmax] capitalize hover:text-orange-500 flex items-center gap-2 group'
                 >
                   portfolios
-                  <span className='text-xs opacity-80 text-[#af89ee] uppercase border border-[#af89ee] px-1 py-px rounded flex items-center gap-1'>
+                  <span className='text-xs text-neutral-100 uppercase border border-neutral-100 px-1 py-px rounded flex items-center gap-1'>
                     sale{" "}
                     <GoArrowUpRight
                       size={"1.2em"}
@@ -98,7 +98,7 @@ const Navbar = () => {
                     />
                   </span>
                 </Link>
-                <p className='text-sm text-neutral-500'>
+                <p className='text-sm text-neutral-200'>
                   evrything about your speacial day
                 </p>
               </li>
@@ -108,7 +108,7 @@ const Navbar = () => {
                   className='text-[1.4vmax] capitalize hover:text-orange-500 flex items-center gap-2 group'
                 >
                   baby &amp; maternity
-                  <span className='text-xs opacity-80 text-[#af89ee] uppercase border border-[#af89ee] px-1 py-px rounded flex items-center gap-1'>
+                  <span className='text-xs text-neutral-100 uppercase border border-neutral-100 px-1 py-px rounded flex items-center gap-1'>
                     sale{" "}
                     <GoArrowUpRight
                       size={"1.2em"}
@@ -116,7 +116,7 @@ const Navbar = () => {
                     />
                   </span>
                 </Link>
-                <p className='text-sm text-neutral-500'>
+                <p className='text-sm text-neutral-200'>
                   evrything about your speacial day
                 </p>
               </li>
@@ -127,11 +127,11 @@ const Navbar = () => {
           <li className='flex items-center gap-1 text-[1.2vmax] capitalize group-hover:text-[#af89ee] group-hover:bg-[#141217] px-3 py-1 rounded-xl cursor-default'>
             portfolio
           </li>
-          <div className='absolute top-full -left-0 -translate-x-1/2 bg-black invisible group-hover:visible flex items-start my-10 gap-4 transition-all origin-top-right opacity-0 group-hover:opacity-100 duration-700 rounded-lg'>
+          <div className='absolute top-full -left-0 -translate-x-1/2 bg-[linear-gradient(90deg,_rgba(53,0,110,1)_0%,_rgba(153,0,126,1)_40%,_rgba(204,1,126,1)_64%,_rgba(249,109,96,1)_100%)] invisible group-hover:visible flex items-start my-10 gap-4 transition-all origin-top-right opacity-0 group-hover:opacity-100 duration-700 rounded-lg'>
             <div className='flex flex-col items-start justify-between self-stretch px-8 w-80 py-4'>
               <div className='px-4 py-2'>
                 <h3 className='text-xl'>Our best works</h3>
-                <p className='text-sm text-neutral-500 font-medium'>
+                <p className='text-sm text-neutral-200 font-medium'>
                   Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                   Deserunt sunt dicta et quia nemo laudantium dolor a eos harum
                   accusantium iste itaque
@@ -152,7 +152,7 @@ const Navbar = () => {
                 <h4 className='text-[1.4vmax] capitalize hover:text-orange-500'>
                   <Link href='/gallery'>photos</Link>
                 </h4>
-                <p className='text-sm text-neutral-500'>
+                <p className='text-sm text-neutral-200'>
                   evrything about your speacial day
                 </p>
               </li>
@@ -160,7 +160,7 @@ const Navbar = () => {
                 <h4 className='text-[1.4vmax] capitalize hover:text-orange-500'>
                   <Link href='/films'>films</Link>
                 </h4>
-                <p className='text-sm text-neutral-500'>
+                <p className='text-sm text-neutral-200'>
                   evrything about your speacial day
                 </p>
               </li>
@@ -170,7 +170,7 @@ const Navbar = () => {
                     reels
                   </Link>
                 </h4>
-                <p className='text-sm text-neutral-500'>
+                <p className='text-sm text-neutral-200'>
                   evrything about your speacial day
                 </p>
               </li>
@@ -178,7 +178,7 @@ const Navbar = () => {
                 <h4 className='text-[1.4vmax] capitalize hover:text-orange-500'>
                   albums
                 </h4>
-                <p className='text-sm text-neutral-500'>
+                <p className='text-sm text-neutral-200'>
                   evrything about your speacial day
                 </p>
               </li>
@@ -186,7 +186,7 @@ const Navbar = () => {
                 <h4 className='text-[1.4vmax] capitalize hover:text-orange-500'>
                   invitations
                 </h4>
-                <p className='text-sm text-neutral-500'>
+                <p className='text-sm text-neutral-200'>
                   evrything about your speacial day
                 </p>
               </li>
@@ -197,11 +197,11 @@ const Navbar = () => {
           <li className='flex items-center gap-1 text-[1.2vmax] capitalize group-hover:text-[#af89ee] group-hover:bg-[#141217] px-3 py-1 rounded-xl cursor-default'>
             resources
           </li>
-          <div className='absolute top-full -left-0 -translate-x-1/2 bg-black invisible group-hover:visible flex items-start my-10 gap-4 w-auto transition-all origin-top-right opacity-0 group-hover:opacity-100 duration-700 rounded-lg'>
+          <div className='absolute top-full -left-0 -translate-x-1/2 bg-[linear-gradient(90deg,_rgba(53,0,110,1)_0%,_rgba(153,0,126,1)_40%,_rgba(204,1,126,1)_64%,_rgba(249,109,96,1)_100%)] invisible group-hover:visible flex items-start my-10 gap-4 w-auto transition-all origin-top-right opacity-0 group-hover:opacity-100 duration-700 rounded-lg'>
             <div className='flex flex-col items-start justify-between self-stretch px-8 w-80 py-4 gap-4'>
               <div className='px-4'>
                 <h3 className='text-xl'>Our best works</h3>
-                <p className='text-sm text-neutral-500 font-medium'>
+                <p className='text-sm text-neutral-200 font-medium'>
                   Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                   Deserunt sunt dicta et quia nemo laudantium dolor a eos harum
                   accusantium iste itaque
@@ -222,7 +222,7 @@ const Navbar = () => {
                 <h4 className='text-[1.4vmax] capitalize hover:text-orange-500'>
                   <Link href='/blogs'>blogs</Link>
                 </h4>
-                <p className='text-sm text-neutral-500'>
+                <p className='text-sm text-neutral-200'>
                   evrything about your speacial day
                 </p>
               </li>
@@ -230,7 +230,7 @@ const Navbar = () => {
                 <h4 className='text-[1.4vmax] capitalize hover:text-orange-500'>
                   learn
                 </h4>
-                <p className='text-sm text-neutral-500'>
+                <p className='text-sm text-neutral-200'>
                   evrything about your speacial day
                 </p>
               </li>
@@ -238,7 +238,7 @@ const Navbar = () => {
                 <h4 className='text-[1.4vmax] capitalize hover:text-orange-500'>
                   editing services
                 </h4>
-                <p className='text-sm text-neutral-500'>
+                <p className='text-sm text-neutral-200'>
                   evrything about your speacial day
                 </p>
               </li>
@@ -248,7 +248,7 @@ const Navbar = () => {
                     join as a freelancer
                   </Link>
                 </h4>
-                <p className='text-sm text-neutral-500'>
+                <p className='text-sm text-neutral-200'>
                   evrything about your speacial day
                 </p>
               </li>
@@ -259,11 +259,11 @@ const Navbar = () => {
           <li className='flex items-center gap-1 text-[1.2vmax] capitalize group-hover:text-[#af89ee] group-hover:bg-[#141217] px-3 py-1 rounded-xl cursor-default'>
             company
           </li>
-          <div className='absolute top-full -left-0 -translate-x-1/2 bg-black invisible group-hover:visible flex items-start my-10 gap-4 w-auto transition-all origin-top-right opacity-0 group-hover:opacity-100 duration-700 rounded-lg'>
+          <div className='absolute top-full -left-0 -translate-x-1/2 bg-[linear-gradient(90deg,_rgba(53,0,110,1)_0%,_rgba(153,0,126,1)_40%,_rgba(204,1,126,1)_64%,_rgba(249,109,96,1)_100%)] invisible group-hover:visible flex items-start my-10 gap-4 w-auto transition-all origin-top-right opacity-0 group-hover:opacity-100 duration-700 rounded-lg'>
             <div className='flex flex-col items-start justify-between self-stretch px-8 w-80 py-4'>
               <div className='px-4'>
                 <h3 className='text-xl'>Our best works</h3>
-                <p className='text-sm text-neutral-500 font-medium'>
+                <p className='text-sm text-neutral-200 font-medium'>
                   Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                   Deserunt sunt dicta et quia nemo laudantium dolor a eos harum
                   accusantium iste itaque
@@ -284,7 +284,7 @@ const Navbar = () => {
                 <h4 className='text-[1.4vmax] capitalize hover:text-orange-500'>
                   <Link href='/about_us'>about us</Link>
                 </h4>
-                <p className='text-sm text-neutral-500'>
+                <p className='text-sm text-neutral-200'>
                   evrything about your speacial day
                 </p>
               </li>
@@ -292,7 +292,7 @@ const Navbar = () => {
                 <h4 className='text-[1.4vmax] capitalize hover:text-orange-500'>
                   <Link href='/careers'>careers</Link>
                 </h4>
-                <p className='text-sm text-neutral-500'>
+                <p className='text-sm text-neutral-200'>
                   evrything about your speacial day
                 </p>
               </li>
@@ -300,7 +300,7 @@ const Navbar = () => {
                 <h4 className='text-[1.4vmax] capitalize hover:text-orange-500'>
                   <Link href='/contact-us'>contact us</Link>
                 </h4>
-                <p className='text-sm text-neutral-500'>
+                <p className='text-sm text-neutral-200'>
                   evrything about your speacial day
                 </p>
               </li>
@@ -308,7 +308,7 @@ const Navbar = () => {
                 <h4 className='text-[1.4vmax] capitalize hover:text-orange-500'>
                   <Link href='/faq'>FAQs</Link>
                 </h4>
-                <p className='text-sm text-neutral-500'>
+                <p className='text-sm text-neutral-200'>
                   evrything about your speacial day
                 </p>
               </li>
@@ -319,7 +319,7 @@ const Navbar = () => {
                 >
                   join us
                 </Link>
-                <p className='text-sm text-neutral-500'>
+                <p className='text-sm text-neutral-200'>
                   evrything about your speacial day
                 </p>
               </li>
@@ -327,7 +327,7 @@ const Navbar = () => {
                 <h4 className='text-[1.4vmax] capitalize hover:text-orange-500'>
                   <Link href='/reviews'>reviews</Link>
                 </h4>
-                <p className='text-sm text-neutral-500'>
+                <p className='text-sm text-neutral-200'>
                   evrything about your speacial day
                 </p>
               </li>
@@ -344,8 +344,8 @@ const Navbar = () => {
         </Link>
       </div>
       <div
-        className={`md:hidden flex flex-col gap-[8vmax] absolute top-0 ${
-          showMenu ? "left-0" : "-left-full"
+        className={`md:hidden flex flex-col gap-[8vmax] absolute top-0 left-0 ${
+          showMenu ? "translate-x-0" : "-translate-x-full"
         } min-h-screen w-full gradient transition-all duration-500`}
       >
         <div className='flex items-center gap-[2vmax] mx-[2vmax] my-4 justify-between'>
@@ -376,8 +376,8 @@ const Navbar = () => {
               </div>
             </li>
             <div
-              className={`flex items-stretch w-full overflow-hidden transition-all duration-700 ${
-                showServices ? "h-auto opacity-100" : "h-0 opacity-0"
+              className={`flex items-stretch w-full overflow-x-hidden transition-all duration-700 ${
+                showServices ? "h-[35vh] opacity-100" : "h-0 opacity-0"
               }`}
             >
               <ul className='py-2 flex flex-col items-start gap-2 min-w-[17vmax] peer'>
@@ -471,13 +471,13 @@ const Navbar = () => {
               </div>
             </li>
             <div
-              className={`flex items-stretch w-full overflow-hidden transition-all duration-700 ${
-                showPortfolio ? "h-auto opacity-100" : "h-0 opacity-0"
+              className={`items-stretch w-full overflow-x-hidden transition-all duration-700 ${
+                showPortfolio ? "h-[35vh] opacity-100" : "h-0 opacity-0"
               }`}
             >
               <ul className='py-2 flex flex-col items-start gap-2 min-w-[17vmax] peer'>
                 <li className='flex flex-col items-start'>
-                  <h4 className='text-xl capitalize hover:text-orange-500'>
+                  <h4 className='capitalize hover:text-orange-500'>
                     <Link onClick={handelShowMenu} href='/gallery'>
                       photos
                     </Link>
@@ -487,7 +487,7 @@ const Navbar = () => {
                   </p>
                 </li>
                 <li className='flex flex-col items-start'>
-                  <h4 className='text-xl capitalize hover:text-orange-500'>
+                  <h4 className='capitalize hover:text-orange-500'>
                     <Link href='/films' onClick={handelShowMenu}>
                       films
                     </Link>
@@ -497,7 +497,7 @@ const Navbar = () => {
                   </p>
                 </li>
                 <li className='flex flex-col items-start'>
-                  <h4 className='text-xl capitalize hover:text-orange-500'>
+                  <h4 className='capitalize hover:text-orange-500'>
                     <Link className='' onClick={handelShowMenu} href='/reels'>
                       reels
                     </Link>
@@ -507,15 +507,13 @@ const Navbar = () => {
                   </p>
                 </li>
                 <li className='flex flex-col items-start'>
-                  <h4 className='text-xl capitalize hover:text-orange-500'>
-                    albums
-                  </h4>
+                  <h4 className='capitalize hover:text-orange-500'>albums</h4>
                   <p className='text-sm text-neutral-300'>
                     evrything about your speacial day
                   </p>
                 </li>
                 <li className='flex flex-col items-start'>
-                  <h4 className='text-xl capitalize hover:text-orange-500'>
+                  <h4 className='capitalize hover:text-orange-500'>
                     invitations
                   </h4>
                   <p className='text-sm text-neutral-300'>
@@ -536,13 +534,13 @@ const Navbar = () => {
               </div>
             </li>
             <div
-              className={`flex items-stretch w-full overflow-hidden transition-all duration-700 ${
-                showResources ? "h-auto opacity-100" : "h-0 opacity-0"
+              className={`flex items-stretch w-full overflow-x-hidden transition-all duration-700 ${
+                showResources ? "h-[35vh] opacity-100" : "h-0 opacity-0"
               }`}
             >
               <ul className='py-2 flex flex-col items-start gap-2 min-w-[17vmax] peer'>
                 <li className='flex flex-col items-start'>
-                  <h4 className='text-xl capitalize hover:text-orange-500'>
+                  <h4 className='capitalize hover:text-orange-500'>
                     <Link href='/blogs' onClick={handelShowMenu}>
                       blogs
                     </Link>
@@ -552,15 +550,13 @@ const Navbar = () => {
                   </p>
                 </li>
                 <li className='flex flex-col items-start'>
-                  <h4 className='text-xl capitalize hover:text-orange-500'>
-                    learn
-                  </h4>
+                  <h4 className='capitalize hover:text-orange-500'>learn</h4>
                   <p className='text-sm text-neutral-300'>
                     evrything about your speacial day
                   </p>
                 </li>
                 <li className='flex flex-col items-start'>
-                  <h4 className='text-xl capitalize hover:text-orange-500'>
+                  <h4 className='capitalize hover:text-orange-500'>
                     editing services
                   </h4>
                   <p className='text-sm text-neutral-300'>
@@ -568,7 +564,7 @@ const Navbar = () => {
                   </p>
                 </li>
                 <li className='flex flex-col items-start'>
-                  <h4 className='text-xl capitalize hover:text-orange-500'>
+                  <h4 className='capitalize hover:text-orange-500'>
                     <Link
                       href='https://fipezo.com'
                       target='_blank'
@@ -595,13 +591,13 @@ const Navbar = () => {
               </div>
             </li>
             <div
-              className={`flex items-stretch w-full overflow-hidden transition-all duration-700 ${
-                showCompany ? "h-auto opacity-100" : "h-0 opacity-0"
+              className={`flex items-stretch w-full overflow-x-hidden transition-all duration-700 ${
+                showCompany ? "h-[35vh] opacity-100" : "h-0 opacity-0"
               }`}
             >
               <ul className='py-2 flex flex-col items-start gap-2 min-w-[17vmax] peer'>
                 <li className='flex flex-col items-start'>
-                  <h4 className='text-xl capitalize hover:text-orange-500'>
+                  <h4 className='capitalize hover:text-orange-500'>
                     <Link onClick={handelShowMenu} href='/about_us'>
                       about us
                     </Link>
@@ -611,7 +607,7 @@ const Navbar = () => {
                   </p>
                 </li>
                 <li className='flex flex-col items-start'>
-                  <h4 className='text-xl capitalize hover:text-orange-500'>
+                  <h4 className='capitalize hover:text-orange-500'>
                     <Link onClick={handelShowMenu} href='/careers'>
                       careers
                     </Link>
@@ -621,7 +617,7 @@ const Navbar = () => {
                   </p>
                 </li>
                 <li className='flex flex-col items-start'>
-                  <h4 className='text-xl capitalize hover:text-orange-500'>
+                  <h4 className='capitalize hover:text-orange-500'>
                     <Link onClick={handelShowMenu} href='/contact-us'>
                       contact us
                     </Link>
@@ -631,7 +627,7 @@ const Navbar = () => {
                   </p>
                 </li>
                 <li className='flex flex-col items-start'>
-                  <h4 className='text-xl capitalize hover:text-orange-500'>
+                  <h4 className='capitalize hover:text-orange-500'>
                     <Link onClick={handelShowMenu} href='/faq'>
                       FAQs
                     </Link>
@@ -644,7 +640,7 @@ const Navbar = () => {
                   <Link
                     href='/join-us'
                     onClick={handelShowMenu}
-                    className='text-xl capitalize hover:text-orange-500'
+                    className='capitalize hover:text-orange-500'
                   >
                     join us
                   </Link>
@@ -653,7 +649,7 @@ const Navbar = () => {
                   </p>
                 </li>
                 <li className='flex flex-col items-start'>
-                  <h4 className='text-xl capitalize hover:text-orange-500'>
+                  <h4 className='capitalize hover:text-orange-500'>
                     <Link href='/reviews' onClick={handelShowMenu}>
                       reviews
                     </Link>

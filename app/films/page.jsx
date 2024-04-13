@@ -21,7 +21,7 @@ export default async function Services() {
             professional Photography & Videography team in Kolkata.
           </p>
         </section>
-        <section className='flex items-center justify-center flex-wrap gap-4 mx-8'>
+        <section className='flex items-center justify-center flex-wrap gap-4 sm:mx-8 mx-2'>
           {films.map((item, index) => (
             <FilmsCard key={index} />
           ))}

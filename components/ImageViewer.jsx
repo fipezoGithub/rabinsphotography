@@ -25,7 +25,7 @@ const ImageViewerComponent = ({ image, index, data }) => {
         width={600}
         height={400}
         onClick={() => openImageViewer(index)}
-        className='w-[20vw] h-[20vw] object-cover cursor-pointer hover:scale-110 transition duration-500'
+        className='w-[20vmax] h-[20vmax] object-cover cursor-pointer hover:scale-110 transition duration-500'
       />
       {isViewerOpen && (
         <ImageViewer
