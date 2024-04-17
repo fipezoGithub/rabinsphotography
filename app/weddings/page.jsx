@@ -25,7 +25,7 @@ export default async function Weddings() {
         <HeaderVideoLogo />
         <WeddingFilter />
         <div className='my-8 flex items-center justify-center gap-4 flex-wrap'>
-          {weddings.map((item, index) => (
+          {weddings?.map((item, index) => (
             <WeddingCard key={index} wedding={item} />
           ))}
         </div>

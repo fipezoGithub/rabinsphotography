@@ -215,7 +215,7 @@ export default async function Home() {
             </p>
           </div>
           <div className='flex items-start justify-center gap-6 my-8 mx-4 sm:mx-0 flex-wrap'>
-            {recentBlogs.slice(0, 6).map((blog, index) => (
+            {recentBlogs?.slice(0, 6).map((blog, index) => (
               <BlogCard key={index} blog={blog} />
             ))}
           </div>

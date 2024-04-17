@@ -30,7 +30,7 @@ export default async function Blogs() {
           </p>
         </header>
         <section className='flex items-start justify-center gap-6 my-8 flex-wrap'>
-          {blogsData.map((item, index) => (
+          {blogsData?.map((item, index) => (
             <BlogCard key={index} blog={item} />
           ))}
         </section>
