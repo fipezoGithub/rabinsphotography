@@ -5,8 +5,19 @@ import Navbar from "@/components/Navbar";
 import WeddingCard from "@/components/WeddingCard";
 import WeddingFilter from "@/components/WeddingFilter";
 
+async function getAllWeddings() {
+  try {
+    const resp = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URI}/weddings`, {
+      cache: "no-store",
+    });
+    const res = await resp.json();
+    return res;
+  } catch (error) {
+    console.log(error);
+  }
+}
 export default async function Weddings() {
-  const weddings = Array.from({ length: 10 });
+  const weddings = await getAllWeddings();
   return (
     <>
       <Navbar />
@@ -14,8 +25,8 @@ export default async function Weddings() {
         <HeaderVideoLogo />
         <WeddingFilter />
         <div className='my-8 flex items-center justify-center gap-4 flex-wrap'>
-          {weddings.map((_, index) => (
-            <WeddingCard key={index} />
+          {weddings.map((item, index) => (
+            <WeddingCard key={index} wedding={item} />
           ))}
         </div>
       </main>

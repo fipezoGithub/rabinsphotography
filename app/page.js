@@ -12,8 +12,20 @@ import { IoMail } from "react-icons/io5";
 import { FaPhoneAlt } from "react-icons/fa";
 import HeroHeaderVideo from "@/components/HeroHeaderVideo";
 
-export default function Home() {
-  const recentBlogs = Array.from({ length: 6 });
+async function getAllBlogs() {
+  try {
+    const resp = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URI}/blogs`, {
+      cache: "no-store",
+    });
+    const res = await resp.json();
+    return res;
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+export default async function Home() {
+  const recentBlogs = await getAllBlogs();
 
   return (
     <>
@@ -203,8 +215,8 @@ export default function Home() {
             </p>
           </div>
           <div className='flex items-start justify-center gap-6 my-8 mx-4 sm:mx-0 flex-wrap'>
-            {recentBlogs.map((blog, index) => (
-              <BlogCard key={index} />
+            {recentBlogs.slice(0, 6).map((blog, index) => (
+              <BlogCard key={index} blog={blog} />
             ))}
           </div>
           <Link

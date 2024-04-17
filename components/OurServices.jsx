@@ -196,7 +196,7 @@ const OurServices = () => {
         ))}
       </div>
       <Link
-        href='/services'
+        href='/gallery'
         className='text-[1.4vmax] capitalize bg-blue-600 text-white font-semibold rounded-3xl px-6 py-2 hover:bg-white hover:text-blue-600 transition duration-500 delay-75'
       >
         view more

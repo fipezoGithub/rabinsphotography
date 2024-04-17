@@ -1,11 +1,13 @@
 "use client";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import React, { useCallback, useState } from "react";
 import ImageViewer from "react-simple-image-viewer";
 
-const ImageViewerComponent = ({ image, index, data }) => {
+const ImageViewerComponent = ({ image, index, data, imagePrefix }) => {
   const [currentImage, setCurrentImage] = useState(0);
   const [isViewerOpen, setIsViewerOpen] = useState(false);
+  const pathName = usePathname();
 
   const openImageViewer = useCallback((index) => {
     setCurrentImage(index);
@@ -17,10 +19,15 @@ const ImageViewerComponent = ({ image, index, data }) => {
     setIsViewerOpen(false);
   };
 
+  const img2Show =
+    pathName === "/gallery"
+      ? data.map((item) => item.default.src)
+      : data.map((item) => imagePrefix + "/" + item);
+
   return (
     <>
       <Image
-        src={image}
+        src={pathName === "/gallery" ? image : `${imagePrefix}/${image}`}
         alt='gallery image'
         width={600}
         height={400}
@@ -29,7 +36,7 @@ const ImageViewerComponent = ({ image, index, data }) => {
       />
       {isViewerOpen && (
         <ImageViewer
-          src={data}
+          src={img2Show}
           currentIndex={currentImage}
           disableScroll
           closeOnClickOutside={true}

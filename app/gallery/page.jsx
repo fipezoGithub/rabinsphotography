@@ -5,14 +5,20 @@ import ImageViewerComponent from "@/components/ImageViewer";
 import Navbar from "@/components/Navbar";
 
 export default async function Gallery() {
-  const images = [
-    "/_DSC4885.jpg",
-    "/about-us-team.jpg",
-    "/contact.jpeg",
-    "/header-bg.jpg",
-    "/service.jpeg",
-    "/team_player.jpg","/45.jpg"
-  ];
+  // const images = [
+  //   "/_DSC4885.jpg",
+  //   "/about-us-team.jpg",
+  //   "/contact.jpeg",
+  //   "/header-bg.jpg",
+  //   "/service.jpeg",
+  //   "/team_player.jpg",
+  //   "/45.jpg",
+  // ];
+  const importAll = (r) => r.keys().map(r);
+  const images = importAll(
+    require.context("../../public/wedding/", true, /\.(png|jpe?g|svg)$/)
+  );
+
   return (
     <>
       <Navbar />

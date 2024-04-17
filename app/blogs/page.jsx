@@ -2,8 +2,20 @@ import BlogCard from "@/components/BlogCard";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 
+async function getAllBlogs() {
+  try {
+    const resp = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URI}/blogs`, {
+      cache: "no-store",
+    });
+    const res = await resp.json();
+    return res;
+  } catch (error) {
+    console.log(error);
+  }
+}
+
 export default async function Blogs() {
-  const blogsData = Array.from({ length: 12 });
+  const blogsData = await getAllBlogs();
   return (
     <>
       <Navbar />
@@ -19,7 +31,7 @@ export default async function Blogs() {
         </header>
         <section className='flex items-start justify-center gap-6 my-8 flex-wrap'>
           {blogsData.map((item, index) => (
-            <BlogCard key={index} />
+            <BlogCard key={index} blog={item} />
           ))}
         </section>
       </main>

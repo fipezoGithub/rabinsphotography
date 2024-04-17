@@ -1,5 +1,7 @@
 import { parse } from "parse5";
 
+// const { db } = require("../../utils/db");
+
 export async function GET(req) {
   const PLACE_URL =
     "https://www.google.com/maps/place/Rabin's+Photography%C2%AD/@22.5941259,88.3917508,17z/data=!4m18!1m9!3m8!1s0x3a0277b182fd5f73:0xc2d04a221fb9ff27!2sRabin's+Photography%C2%AD!8m2!3d22.5941259!4d88.3943257!9m1!1b1!16s%2Fg%2F11kkmt3_np!3m7!1s0x3a0277b182fd5f73:0xc2d04a221fb9ff27!8m2!3d22.5941259!4d88.3943257!9m1!1b1!16s%2Fg%2F11kkmt3_np?entry=ttu";

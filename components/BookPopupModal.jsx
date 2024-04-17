@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
+import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { IoMdClose } from "react-icons/io";
 
@@ -46,12 +47,12 @@ const BookPopupModal = () => {
           <p className='text-[1.3vmax] font-medium text-orange-500 text-center'>
             Want to freeze your special moments? Make it happen with us!
           </p>
-          <button
-            type='button'
+          <Link
+            href='/contact-us'
             className='text-[1.3vmax] font-medium bg-orange-500 capitalize text-neutral-100 rounded-3xl px-4 py-1'
           >
             book now
-          </button>
+          </Link>
         </div>
       </div>
     </aside>
