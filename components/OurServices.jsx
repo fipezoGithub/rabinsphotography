@@ -19,24 +19,28 @@ const OurServices = () => {
       description:
         "Elegant wedding photography capturing your special day with timeless beauty.",
       imgSrc: "/wedding-service-cover.jpg",
+      url: "/wedding",
     },
     {
       title: "pre-wedding photography",
       description:
         "Capture the love and excitement before your big day with our pre-wedding photography services.",
       imgSrc: "/pre-wedding-service-cover.jpg",
+      url: "/wedding",
     },
     {
       title: "maternity & baby photography",
       description:
         "Cherish the beauty of motherhood or the precious moments of your baby's early days with our photography services.",
       imgSrc: "/maternity-service-cover.jpg",
+      url: "/baby-and-maternity",
     },
     {
       title: "rice ceremony photography",
       description:
         "Preserve the joy and tradition of your child's rice ceremony with our professional photography services.",
       imgSrc: "/rice-ceremony-service-cover.jpg",
+      url: "/baby-and-maternity",
     },
   ];
 
@@ -185,12 +189,12 @@ const OurServices = () => {
                 {service.title}
               </h2>
               <p className='text-[1.4vmax]'>{service.description}</p>
-              <button
-                type='button'
+              <Link
+                href={service.url}
                 className='flex items-center gap-1 text-[1vmax] uppercase tracking-widest hover:text-[#8969bd]'
               >
                 know more <FiArrowUpRight />
-              </button>
+              </Link>
             </div>
           </div>
         ))}

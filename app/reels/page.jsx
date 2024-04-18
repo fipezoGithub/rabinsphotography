@@ -55,6 +55,22 @@ export default async function Reels() {
       uri: "https://www.instagram.com/reel/Co90AyZg9L3/",
       videoSrc: "/reels-juita-thumb.mp4",
     },
+    {
+      uri: "https://www.instagram.com/reel/C5lciKXvvhk/",
+      videoSrc: "/reelas-rahuldevbose-eid-thumb.mp4",
+    },
+    {
+      uri: "https://www.instagram.com/reel/C51HNYiNj43/",
+      videoSrc: "/reels-piyali-thumb.mp4",
+    },
+    {
+      uri: "https://www.instagram.com/reel/C5274qQPtsV/",
+      videoSrc: "/reels-barnie-thumb.mp4",
+    },
+    {
+      uri: "https://www.instagram.com/reel/C5s-sq_SUEp/",
+      videoSrc: "/reels-ankusree-thumb.mp4",
+    },
   ];
 
   return (

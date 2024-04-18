@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 const GetInTouch = () => {
   return (
@@ -8,12 +9,12 @@ const GetInTouch = () => {
         <h1 className='text-[2vw] font-bold text-slate-100'>
           Let&apos;s make something great together.
         </h1>
-        <button
-          type='button'
+        <Link
+          href='/contact-us'
           className='bg-slate-100 px-4 py-2 rounded-3xl capitalize text-[1.3vw]'
         >
           get in touch
-        </button>
+        </Link>
       </div>
     </>
   );

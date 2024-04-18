@@ -7,6 +7,33 @@ import Image from "next/image";
 const berkshireSwash = Berkshire_Swash({ subsets: ["latin"], weight: "400" });
 
 export default async function AboutUs() {
+  const backTeam = [
+    {
+      img: "/tumpa-biswas.jpeg",
+      name: "Tumpa Biswas",
+      designation: "Relationship Manager",
+    },
+    {
+      img: "/rik-mondal.jpeg",
+      name: "Rik Mondal",
+      designation: "Video Editor",
+    },
+    {
+      img: "/moumita-kundu.jpeg",
+      name: "Moumita Kundu",
+      designation: "Graphics Designer",
+    },
+    {
+      img: "/pritam-saha.jpeg",
+      name: "Pritam Saha",
+      designation: "Video Editor",
+    },
+    {
+      img: "/aniket-saha.jpeg",
+      name: "Aniket saha",
+      designation: "Web developer",
+    },
+  ];
   return (
     <>
       <Navbar />
@@ -88,10 +115,12 @@ export default async function AboutUs() {
             </div>
             <div>
               <q className={berkshireSwash.className + " text-[1.4vmax]"}>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut
-                maxime, voluptates quasi explicabo saepe ullam officia nemo
-                vero, suscipit quaerat voluptatum! Odit alias modi molestiae
-                commodi omnis velit nulla itaque?
+                I believe in storytelling with successful client review, which
+                preserves every piece of memory in a event. Photography is an
+                art of observation. It&apos;s about finding something
+                interesting an ordinary place. We use the latest equipment and
+                techniques to ensure that every shot is perfect and that every
+                photo tells a story
               </q>{" "}
               -{" "}
               <span className='text-[1.2vmax] font-medium tracking-wide'>
@@ -180,74 +209,28 @@ export default async function AboutUs() {
               Meet our Backbone
             </h1>
             <div className='flex items-center justify-evenly gap-16 flex-wrap max-w-[75vmax] my-6 py-4'>
-              <div className='flex flex-col items-center gap-2 group'>
-                <Image
-                  src='/Rabin-ghosh-seo.jpg'
-                  width={450}
-                  height={150}
-                  alt='Rabin Ghosh CEO'
-                  className='w-[15vmax] h-[15vmax] object-cover rounded-full grayscale transition-all duration-500 group-hover:grayscale-0'
-                />
-                <div className='flex flex-col items-center group-hover:text-purple-800 transition-all duration-500'>
-                  <h1 className='text-[2vmax] capitalize font-semibold'>
-                    mr. rabin ghosh
-                  </h1>
-                  <h3 className='text-[1.2vmax] font-medium'>
-                    Founder &amp; CEO
-                  </h3>
+              {backTeam.map((person, index) => (
+                <div
+                  className='flex flex-col items-center gap-2 group'
+                  key={index}
+                >
+                  <Image
+                    src={person.img}
+                    width={450}
+                    height={150}
+                    alt='Rabin Ghosh CEO'
+                    className='w-[15vmax] h-[15vmax] object-cover object-top rounded-full grayscale transition-all duration-500 group-hover:grayscale-0'
+                  />
+                  <div className='flex flex-col items-center group-hover:text-purple-800 transition-all duration-500'>
+                    <h1 className='text-[2vmax] capitalize font-semibold'>
+                      {person.name}
+                    </h1>
+                    <h3 className='text-[1.2vmax] font-medium'>
+                      {person.designation}
+                    </h3>
+                  </div>
                 </div>
-              </div>
-              <div className='flex flex-col items-center gap-2 group'>
-                <Image
-                  src='/Rabin-ghosh-seo.jpg'
-                  width={450}
-                  height={150}
-                  alt='Rabin Ghosh CEO'
-                  className='w-[15vmax] h-[15vmax] object-cover rounded-full grayscale transition-all duration-500 group-hover:grayscale-0'
-                />
-                <div className='flex flex-col items-center group-hover:text-purple-800 transition-all duration-500'>
-                  <h1 className='text-[2vmax] capitalize font-semibold'>
-                    mr. rabin ghosh
-                  </h1>
-                  <h3 className='text-[1.2vmax] font-medium'>
-                    Founder &amp; CEO
-                  </h3>
-                </div>
-              </div>
-              <div className='flex flex-col items-center gap-2 group'>
-                <Image
-                  src='/Rabin-ghosh-seo.jpg'
-                  width={450}
-                  height={150}
-                  alt='Rabin Ghosh CEO'
-                  className='w-[15vmax] h-[15vmax] object-cover rounded-full grayscale transition-all duration-500 group-hover:grayscale-0'
-                />
-                <div className='flex flex-col items-center group-hover:text-purple-800 transition-all duration-500'>
-                  <h1 className='text-[2vmax] capitalize font-semibold'>
-                    mr. rabin ghosh
-                  </h1>
-                  <h3 className='text-[1.2vmax] font-medium'>
-                    Founder &amp; CEO
-                  </h3>
-                </div>
-              </div>
-              <div className='flex flex-col items-center gap-2 group'>
-                <Image
-                  src='/Rabin-ghosh-seo.jpg'
-                  width={450}
-                  height={150}
-                  alt='Rabin Ghosh CEO'
-                  className='w-[15vmax] h-[15vmax] object-cover rounded-full grayscale transition-all duration-500 group-hover:grayscale-0'
-                />
-                <div className='flex flex-col items-center group-hover:text-purple-800 transition-all duration-500'>
-                  <h1 className='text-[2vmax] capitalize font-semibold'>
-                    mr. rabin ghosh
-                  </h1>
-                  <h3 className='text-[1.2vmax] font-medium'>
-                    Founder &amp; CEO
-                  </h3>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </section>

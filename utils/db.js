@@ -1,9 +1,7 @@
 import { mongoose } from "mongoose";
 
 async function connectDb() {
-  await mongoose.connect(
-    `mongodb+srv://rabinsphotography:T6Qxk454PqF07Qn1@rabinsphotograpghy.s8v3yam.mongodb.net/rabinsphotography`
-  );
+  await mongoose.connect(process.env.NEXT_PUBLIC_MONGO_URI);
   console.log("connected successfully");
 }
 

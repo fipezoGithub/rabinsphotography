@@ -3,7 +3,7 @@ import Link from "next/link";
 import { GoArrowUpRight } from "react-icons/go";
 import Image from "next/image";
 import { IoClose, IoLogoLinkedin, IoMenu } from "react-icons/io5";
-import { useState } from "react";
+import React, { useState } from "react";
 import {
   FaAngleRight,
   FaFacebook,

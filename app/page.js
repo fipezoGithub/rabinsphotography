@@ -117,6 +117,7 @@ export default async function Home() {
             <div className='flex flex-col gap-2'>
               <Image
                 src='/header-bg.jpg'
+                alt='header background'
                 width={300}
                 height={300}
                 className='max-w-[75vmax] md:w-[30.5vmax] rounded-t-xl'
@@ -124,12 +125,14 @@ export default async function Home() {
               <div className='flex gap-2'>
                 <Image
                   src='/service.jpeg'
+                  alt='service'
                   width={150}
                   height={500}
                   className='max-w-[37.5vmax] md:w-[15vmax] rounded-bl-xl'
                 />
                 <Image
                   src='/contact.jpeg'
+                  alt='contact'
                   width={150}
                   height={500}
                   className='max-w-[37.5vmax] md:w-[15vmax] rounded-br-xl'
