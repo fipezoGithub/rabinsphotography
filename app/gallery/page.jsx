@@ -41,7 +41,7 @@ export default async function Gallery() {
           </p>
         </section>
         <section className='flex items-center gap-4 flex-wrap justify-center my-6'>
-          {importAll.map((image, i) => (
+          {importAll?.map((image, i) => (
             <div className='overflow-hidden' key={i}>
               <ImageViewerComponent image={image} index={i} data={importAll} />
             </div>
