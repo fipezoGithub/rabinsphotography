@@ -42,9 +42,7 @@ export default async function WeddingId({ params }) {
       <main className='bg-[linear-gradient(180deg,_rgba(207,196,224,1)_0%,_rgba(253,253,253,1)_50%,_rgba(207,196,224,1)_100%)] flex flex-col items-center justify-center'>
         <header className='mt-9 py-4 flex flex-col items-center gap-6'>
           <Image
-            src={`/wedding/${weddingDetails.husband.toLowerCase()}-${weddingDetails.wife.toLowerCase()}/${
-              weddingDetails.images[0]
-            }`}
+            src={`/api/images/${weddingDetails.images[0]}`}
             alt='wedding cover'
             width={1200}
             height={650}

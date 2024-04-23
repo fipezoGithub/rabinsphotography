@@ -19,15 +19,12 @@ const ImageViewerComponent = ({ image, index, data, imagePrefix }) => {
     setIsViewerOpen(false);
   };
 
-  const img2Show =
-    pathName === "/gallery"
-      ? data.map((item) => item.default.src)
-      : data.map((item) => imagePrefix + "/" + item);
+  const img2Show = data.map((item) => "/api/images/" + item);
 
   return (
     <>
       <Image
-        src={pathName === "/gallery" ? image : `${imagePrefix}/${image}`}
+        src={`/api/images/${image}`}
         alt='gallery image'
         width={600}
         height={400}

@@ -9,9 +9,7 @@ const WeddingCard = ({ wedding }) => {
       className='flex flex-col gap-4 items-center justify-center'
     >
       <Image
-        src={`/wedding/${wedding.husband.toLowerCase()}-${wedding.wife.toLowerCase()}/${
-          wedding.images[0]
-        }`}
+        src={`/api/images/${wedding.images[0]}`}
         alt='wedding'
         width={500}
         height={250}

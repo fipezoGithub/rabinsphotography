@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import GetInTouch from "@/components/GetInTouch";
 import HeaderVideoLogo from "@/components/HeaderVideoLogo";
 import Navbar from "@/components/Navbar";
+import Image from "next/image";
 
 export default async function BabyAndMaternity() {
   const babyAndMaternity = Array.from({ length: 10 });

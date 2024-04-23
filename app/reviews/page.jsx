@@ -43,6 +43,7 @@ export default async function Reviews() {
               ))}
               <FaStarHalfAlt />
             </div>
+            <p className='font-semibold text-[1.7vmax]'>4.9 ratings</p>
           </Link>
           <Link
             href='https://www.facebook.com/RabinsPhotography/reviews'
@@ -62,6 +63,7 @@ export default async function Reviews() {
               ))}
               <FaStarHalfAlt />
             </div>
+            <p className='font-semibold text-[1.7vmax]'>4.7 ratings</p>
           </Link>
           <Link
             href='https://www.wedmegood.com/profile/Rabins-Photography-169825/reviews'
@@ -80,25 +82,7 @@ export default async function Reviews() {
                 <FaStar key={index} />
               ))}
             </div>
-          </Link>
-          <Link
-            href='https://www.justdial.com/Kolkata/Rabins-Photography-Near-Dakshindari-Busstop-Near-Dakshin-Bari-Khalpara-Ultadanga-Main-Road/033PXX33-XX33-171011120502-W3I7_BZDET/writereview?city=Kolkata&area=Ultadanga+Main+Road&fid=&prevRating=0&company_name=Rabin%27s+Photography&nav=1&tapToRate=1'
-            target='_blank'
-            className='flex flex-col items-center justify-center gap-4 bg-white min-w-[15vmax] py-4 rounded-2xl shadow-lg min-h-[20vh]'
-          >
-            <Image
-              src='/justdial-logo.png'
-              alt='justdial'
-              width={400}
-              height={150}
-              className='w-[12vmax]'
-            />
-            <div className='flex items-center justify-center text-amber-400 text-[1.7vmax]'>
-              {[...Array(4)].map((_, index) => (
-                <FaStar key={index} />
-              ))}
-              <FaStarHalfAlt />
-            </div>
+            <p className='font-semibold text-[1.7vmax]'>5.0 ratings</p>
           </Link>
           <Link
             href='https://www.weddingwire.in/wedding-photographers/rabins-photography--e178209'
@@ -118,6 +102,65 @@ export default async function Reviews() {
               ))}
               <FaStarHalfAlt />
             </div>
+            <p className='font-semibold text-[1.7vmax]'>5.0 ratings</p>
+          </Link>
+          <Link
+            href='https://www.weddingbazaar.com/wedding-photographers/kolkata/rabin-s-photography'
+            target='_blank'
+            className='flex flex-col items-center justify-center gap-4 bg-white min-w-[15vmax] py-4 rounded-2xl shadow-lg min-h-[20vh]'
+          >
+            <Image
+              src='/weddingbazar-logo.png'
+              alt='justdial'
+              width={400}
+              height={150}
+              className='w-[12vmax]'
+            />
+            <div className='flex items-center justify-center text-amber-400 text-[1.7vmax]'>
+              {[...Array(5)].map((_, index) => (
+                <FaStar key={index} />
+              ))}
+            </div>
+            <p className='font-semibold text-[1.7vmax]'>5.0 ratings</p>
+          </Link>
+          <Link
+            href='https://www.justdial.com/Kolkata/Rabins-Photography-Near-Dakshindari-Busstop-Near-Dakshin-Bari-Khalpara-Ultadanga-Main-Road/033PXX33-XX33-171011120502-W3I7_BZDET/writereview?city=Kolkata&area=Ultadanga+Main+Road&fid=&prevRating=0&company_name=Rabin%27s+Photography&nav=1&tapToRate=1'
+            target='_blank'
+            className='flex flex-col items-center justify-center gap-4 bg-white min-w-[15vmax] py-4 rounded-2xl shadow-lg min-h-[20vh]'
+          >
+            <Image
+              src='/justdial-logo.png'
+              alt='justdial'
+              width={400}
+              height={150}
+              className='w-[12vmax]'
+            />
+            <div className='flex items-center justify-center text-amber-400 text-[1.7vmax]'>
+              {[...Array(4)].map((_, index) => (
+                <FaStar key={index} />
+              ))}
+              <FaStarHalfAlt />
+            </div>
+            <p className='font-semibold text-[1.7vmax]'>4.8 ratings</p>
+          </Link>
+          <Link
+            href='https://www.justdial.com/Kolkata/Rabins-Photography-Near-Dakshindari-Busstop-Near-Dakshin-Bari-Khalpara-Ultadanga-Main-Road/033PXX33-XX33-171011120502-W3I7_BZDET/writereview?city=Kolkata&area=Ultadanga+Main+Road&fid=&prevRating=0&company_name=Rabin%27s+Photography&nav=1&tapToRate=1'
+            target='_blank'
+            className='flex flex-col items-center justify-center gap-4 bg-white min-w-[15vmax] py-4 rounded-2xl shadow-lg min-h-[20vh]'
+          >
+            <Image
+              src='/home-triangle-logo.png'
+              alt='justdial'
+              width={400}
+              height={150}
+              className='w-[12vmax]'
+            />
+            <div className='flex items-center justify-center text-amber-400 text-[1.7vmax]'>
+              {[...Array(5)].map((_, index) => (
+                <FaStar key={index} />
+              ))}
+            </div>
+            <p className='font-semibold text-[1.7vmax]'>5.0 ratings</p>
           </Link>
         </section>
       </main>

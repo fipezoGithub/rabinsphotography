@@ -4,14 +4,26 @@ import HeaderVideoLogo from "@/components/HeaderVideoLogo";
 import ImageViewerComponent from "@/components/ImageViewer";
 import Navbar from "@/components/Navbar";
 
+async function getAllImages() {
+  try {
+    const res = await fetch(
+      `${process.env.NEXT_PUBLIC_SERVER_URI}/all-images`,
+      {
+        headers: {
+          "Content-Type": "application/json",
+        },
+        cache: "no-store",
+      }
+    );
+    const data = await res.json();
+    return data;
+  } catch (error) {
+    console.log(error);
+  }
+}
+
 export default async function Gallery() {
-
-  const importAll = (r) => r.keys().map(r);
-  let images = importAll(
-    require.context("../../public/wedding/", true, /\.(JPG|png|jpe?g|svg)$/)
-  );
-
-  images = images.filter((item, index) => images.indexOf(item) === index);
+  const importAll = await getAllImages();
 
   return (
     <>
@@ -29,9 +41,9 @@ export default async function Gallery() {
           </p>
         </section>
         <section className='flex items-center gap-4 flex-wrap justify-center my-6'>
-          {images.map((image, i) => (
+          {importAll.map((image, i) => (
             <div className='overflow-hidden' key={i}>
-              <ImageViewerComponent image={image} index={i} data={images} />
+              <ImageViewerComponent image={image} index={i} data={importAll} />
             </div>
           ))}
         </section>
