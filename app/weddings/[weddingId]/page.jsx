@@ -26,15 +26,6 @@ async function getWeddingById(id) {
   }
 }
 export default async function WeddingId({ params }) {
-  // const images = [
-  //   "/_DSC4885.jpg",
-  //   "/about-us-team.jpg",
-  //   "/contact.jpeg",
-  //   "/header-bg.jpg",
-  //   "/service.jpeg",
-  //   "/team_player.jpg",
-  //   "/45.jpg",
-  // ];
   const weddingDetails = await getWeddingById(params.weddingId);
   return (
     <>

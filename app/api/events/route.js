@@ -1,10 +1,8 @@
-import Wedding from "@/models/weddingModel";
+import Event from "@/models/eventModel";
 import { uploadFile } from "@/utils/s3";
 import sharp from "sharp";
 
 const db = require("@/utils/db");
-const fs = require("fs");
-const util = require("util");
 const path = require("path");
 
 async function resizeImage(editedFile) {
@@ -35,17 +33,16 @@ export async function POST(req) {
     const imageFiles = files.map((file) => file.name);
 
     await Promise.all(filePromises);
-    const newWedding = await new Wedding({
-      husband: data.get("husband"),
-      wife: data.get("wife"),
+    const newEvent = await new Event({
+      title: data.get("title"),
       venuename: data.get("venuename"),
       location: data.get("location"),
-      weddingtype: data.get("weddingtype"),
+      eventtype: data.get("eventtype"),
       images: imageFiles,
     });
-    await newWedding.save();
+    await newEvent.save();
 
-    return Response.json(newWedding, { status: 201 });
+    return Response.json(newEvent, { status: 201 });
   } catch (error) {
     console.log(error);
     return Response.json({ message: error.message }, { status: 500 });
@@ -54,8 +51,8 @@ export async function POST(req) {
 
 export async function GET(req) {
   try {
-    const weddings = await Wedding.find({});
-    return Response.json(weddings, { status: 200 });
+    const events = await Event.find({});
+    return Response.json(events, { status: 200 });
   } catch (error) {
     console.log(error);
     return Response.json({ message: error.message }, { status: 500 });

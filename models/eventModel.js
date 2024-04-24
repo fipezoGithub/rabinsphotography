@@ -1,23 +1,22 @@
 import { mongoose } from "mongoose";
 
-const weddingSchema = new mongoose.Schema(
+const eventSchema = new mongoose.Schema(
   {
-    husband: {
+    title: {
       type: String,
       required: true,
     },
-    wife: {
+    location: {
       type: String,
       required: true,
     },
     venuename: {
       type: String,
+      required: true,
     },
-    location: {
+    eventtype: {
       type: String,
-    },
-    weddingtype: {
-      type: String,
+      required: true,
     },
     images: {
       type: [String],
@@ -27,7 +26,7 @@ const weddingSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-const Wedding =
-  mongoose.models.weddingModel || mongoose.model("weddingModel", weddingSchema);
+const Event =
+  mongoose.models.eventModel || mongoose.model("eventModel", eventSchema);
 
-export default Wedding;
+export default Event;

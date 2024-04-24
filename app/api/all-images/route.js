@@ -1,10 +1,17 @@
+import Event from "@/models/eventModel";
 import Wedding from "@/models/weddingModel";
 
 export async function GET(req) {
   try {
     let allImgResponse = [];
-    const all = await Wedding.find({}, { images: 1 });
-    all.map((item) => item.images.map((it) => allImgResponse.push(it)));
+    const allWeddingPhoto = await Wedding.find({}, { images: 1 });
+    const allEventsPhoto = await Event.find({}, { images: 1 });
+    allWeddingPhoto.map((item) =>
+      item.images.map((it) => allImgResponse.push(it))
+    );
+    allEventsPhoto.map((item) =>
+      item.images.map((it) => allImgResponse.push(it))
+    );
     return Response.json(allImgResponse, { status: 200 });
   } catch (error) {
     console.log(error);

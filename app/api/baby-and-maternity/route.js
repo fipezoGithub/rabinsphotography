@@ -8,7 +8,7 @@ const path = require("path");
 async function resizeImage(editedFile) {
   const file = await editedFile.arrayBuffer();
   const filename = path.parse(editedFile.name).name;
-  const ext = ".webp";
+  const ext = path.parse(editedFile.name).ext;
   const resizedFilename = filename + ext;
   const outputPath = "uploads/" + resizedFilename;
 

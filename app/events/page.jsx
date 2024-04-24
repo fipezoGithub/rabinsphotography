@@ -5,8 +5,20 @@ import GetInTouch from "@/components/GetInTouch";
 import HeaderVideoLogo from "@/components/HeaderVideoLogo";
 import Navbar from "@/components/Navbar";
 
+async function getAllEvents() {
+  try {
+    const resp = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URI}/events`, {
+      cache: "no-store",
+    });
+    const res = await resp.json();
+    return res;
+  } catch (error) {
+    console.log(error);
+  }
+}
+
 export default async function Events() {
-  const events = Array.from({ length: 10 });
+  const events = await getAllEvents();
 
   return (
     <>
@@ -15,8 +27,8 @@ export default async function Events() {
         <HeaderVideoLogo />
         <EventsFilter />
         <div className='my-8 flex items-center justify-center gap-4 flex-wrap'>
-          {events.map((_, index) => (
-            <EventCard key={index} />
+          {events?.map((item, index) => (
+            <EventCard key={index} event={item} />
           ))}
         </div>
       </main>

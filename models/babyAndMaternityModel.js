@@ -21,7 +21,7 @@ const babyAndMaternitySchema = new mongoose.Schema({
     type: [String],
     required: true,
   },
-});
+},{ timestamps: true });
 
 const BabyAndMaternity =
   mongoose.models.babyAndMaternityModel ||
