@@ -30,6 +30,17 @@ async function getAllBlogs(req, res) {
   }
 }
 
+async function getBlogById(req, res) {
+  try {
+    const id = req.params.id;
+    const blog = await Blog.findById(id);
+    res.status(200).json(blog);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: error.message });
+  }
+}
+
 async function updateAblog(req, res) {
   try {
     const id = req.params.id;
@@ -69,4 +80,10 @@ async function deleteAblog(req, res) {
   }
 }
 
-module.exports = { createNewBlog, getAllBlogs, updateAblog, deleteAblog };
+module.exports = {
+  createNewBlog,
+  getAllBlogs,
+  updateAblog,
+  deleteAblog,
+  getBlogById,
+};

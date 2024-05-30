@@ -1,6 +1,6 @@
 const multer = require("multer");
 
-const upload = multer({
+const avatarUpload = multer({
   storage: multer.diskStorage({
     destination: (req, file, cb) => {
       cb(null, "./uploads");
@@ -11,6 +11,6 @@ const upload = multer({
       cb(null, file.fieldname + "-" + uniqueSuffix + "-" + fileName);
     },
   }),
-}).fields([{ name: "images", maxCount: 20 }]);
+}).single("avatar");
 
-module.exports = upload;
+module.exports = avatarUpload;
