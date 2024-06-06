@@ -9,7 +9,7 @@ const BlogCard = ({ blog }) => {
       className='max-w-[45vmax] sm:max-w-[25vmax] flex flex-col items-start gap-3'
     >
       <Image
-        src={`/blogcovers/${blog.blogCover}`}
+        src={`${process.env.NEXT_PUBLIC_SERVER_URI}/images/${blog.blogCover}`}
         alt='blog-cover'
         width={600}
         height={400}

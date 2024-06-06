@@ -39,6 +39,17 @@ async function getAllPortfolios(req, res) {
   }
 }
 
+async function getAPortFolioById(req, res) {
+  try {
+    const id = req.params.id;
+    const portfolio = await Portfolio.findById(id);
+    res.status(200).json(portfolio);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: error.message });
+  }
+}
+
 async function updateAnPortfolio(req, res) {
   try {
     const id = req.params.id;
@@ -98,4 +109,5 @@ module.exports = {
   getAllPortfolios,
   updateAnPortfolio,
   deleteAnPortfolio,
+  getAPortFolioById,
 };

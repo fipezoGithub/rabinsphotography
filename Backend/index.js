@@ -17,6 +17,7 @@ const Wedding = require("./models/weddingModel");
 const Event = require("./models/eventModel");
 const BabyAndMaternity = require("./models/babyAndMaternityModel");
 const userRouter = require("./routers/userRouter");
+const reelRouter = require("./routers/reelRouter");
 
 const app = express();
 app.use(cors());
@@ -36,6 +37,7 @@ app.use("/api/join-us", joinUsRouter);
 app.use("/api/blogs", blogRouter);
 app.use("/api/portfolio", portfolioRouter);
 app.use("/api/user", userRouter);
+app.use("/api/reel", reelRouter);
 
 app.get("/api/all-images", async (req, res) => {
   try {

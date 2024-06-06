@@ -3,75 +3,23 @@ import GetInTouch from "@/components/GetInTouch";
 import HeaderVideoLogo from "@/components/HeaderVideoLogo";
 import Navbar from "@/components/Navbar";
 import ReelsWithThumb from "@/components/ReelsWithThumb";
-import Image from "next/image";
 
+async function getAllReels() {
+  try {
+    const resp = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URI}/reel`, {
+      headers: {
+        "Content-Type": "application/json",
+      },
+      cache: "no-store",
+    });
+    const res = await resp.json();
+    return res;
+  } catch (error) {
+    console.log(error);
+  }
+}
 export default async function Reels() {
-  const reelsData = [
-    {
-      uri: "https://www.instagram.com/reel/C4s6S-UvLtB/",
-      videoSrc: "/reels-olivia-thumb.mp4",
-    },
-    {
-      uri: "https://www.instagram.com/reel/C32DX-dvtLG/",
-      videoSrc: "/reels-shilpa-thumb.mp4",
-    },
-    {
-      uri: "https://www.instagram.com/reel/C3qGcWBPyD0/",
-      videoSrc: "/reels-jhoom-thumb.mp4",
-    },
-    {
-      uri: "https://www.instagram.com/reel/C3aQglUvTT3/",
-      videoSrc: "/reels-gleem-thumb.mp4",
-    },
-    {
-      uri: "https://www.instagram.com/reel/C2KppCPPKfs/",
-      videoSrc: "/reels-olivia-zebra-thumb.mp4",
-    },
-    {
-      uri: "https://www.instagram.com/reel/C5hsYqNvMPQ/",
-      videoSrc: "/reels-rahuldevbose-thumb.mp4",
-    },
-    {
-      uri: "https://www.instagram.com/reel/C1WP38CvO73/",
-      videoSrc: "/reels-rimjhim-thumb.mp4",
-    },
-    {
-      uri: "https://www.instagram.com/reel/C1f9gsRPZmF/",
-      videoSrc: "/reels-yellow-thumb.mp4",
-    },
-    {
-      uri: "https://www.instagram.com/reel/C3zefzpP04A/",
-      videoSrc: "/reels-christian-thumb.mp4",
-    },
-    {
-      uri: "https://www.instagram.com/reel/CzjiOmaNWsc/",
-      videoSrc: "/reels-srijita-thumb.mp4",
-    },
-    {
-      uri: "https://www.instagram.com/reel/CvXCo8GtGXX/",
-      videoSrc: "/reels-sushi-thumb.mp4",
-    },
-    {
-      uri: "https://www.instagram.com/reel/Co90AyZg9L3/",
-      videoSrc: "/reels-juita-thumb.mp4",
-    },
-    {
-      uri: "https://www.instagram.com/reel/C5lciKXvvhk/",
-      videoSrc: "/reelas-rahuldevbose-eid-thumb.mp4",
-    },
-    {
-      uri: "https://www.instagram.com/reel/C51HNYiNj43/",
-      videoSrc: "/reels-piyali-thumb.mp4",
-    },
-    {
-      uri: "https://www.instagram.com/reel/C5274qQPtsV/",
-      videoSrc: "/reels-barnie-thumb.mp4",
-    },
-    {
-      uri: "https://www.instagram.com/reel/C5s-sq_SUEp/",
-      videoSrc: "/reels-ankusree-thumb.mp4",
-    },
-  ];
+  const reelsData = await getAllReels();
 
   return (
     <>

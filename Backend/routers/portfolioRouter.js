@@ -5,6 +5,7 @@ const {
   getAllPortfolios,
   updateAnPortfolio,
   deleteAnPortfolio,
+  getAPortFolioById,
 } = require("../controllers/portfolioController");
 
 const portfolioRouter = express.Router();
@@ -16,6 +17,7 @@ portfolioRouter
 
 portfolioRouter
   .route("/:id")
+  .get(getAPortFolioById)
   .put(servicesImagesUpoload, updateAnPortfolio)
   .delete(deleteAnPortfolio);
 

@@ -22,6 +22,10 @@ const userSchema = new mongoose.Schema(
       type: [mongoose.Schema.Types.ObjectId],
       ref: "orderModel",
     },
+    favouritePackage: {
+      type: [mongoose.Schema.Types.ObjectId],
+      ref: "packageModel",
+    },
   },
   { timestamps: true }
 );

@@ -38,7 +38,7 @@ export default async function BlogUid({ params }) {
         </header>
         <section className='flex flex-col items-center gap-6'>
           <Image
-            src={`/blogcovers/${pageData.blogCover}`}
+            src={`${process.env.NEXT_PUBLIC_SERVER_URI}/images/${pageData.blogCover}`}
             alt='blog-cover'
             width={1200}
             height={720}

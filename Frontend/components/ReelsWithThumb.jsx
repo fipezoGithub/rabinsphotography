@@ -25,7 +25,7 @@ const ReelsWithThumb = ({ item }) => {
           className='relative'
         >
           <video
-            src={item.videoSrc}
+            src={`${process.env.NEXT_PUBLIC_SERVER_URI}/images/${item.videoSrc}`}
             className='max-w-[18vmax] rounded-3xl shadow-2xl'
             autoPlay
             loop

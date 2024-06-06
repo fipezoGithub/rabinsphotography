@@ -19,7 +19,9 @@ const ImageViewerComponent = ({ image, index, data, imagePrefix }) => {
     setIsViewerOpen(false);
   };
 
-  const img2Show = data.map((item) => "${process.env.NEXT_PUBLIC_SERVER_URI}/images/" + item);
+  const img2Show = data.map(
+    (item) => process.env.NEXT_PUBLIC_SERVER_URI + "/images/" + item
+  );
 
   return (
     <>
