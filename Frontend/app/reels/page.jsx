@@ -37,7 +37,7 @@ export default async function Reels() {
           </p>
         </section>
         <section className='flex items-center gap-8 flex-wrap justify-center my-4 mx-8'>
-          {reelsData.map((item, index) => (
+          {reelsData?.map((item, index) => (
             <ReelsWithThumb item={item} key={index} />
           ))}
         </section>
