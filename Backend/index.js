@@ -41,6 +41,8 @@ app.use("/api/reel", reelRouter);
 
 app.get("/api/all-images", async (req, res) => {
   try {
+    const limit = parseInt(req.query.limit);
+    const offset = parseInt(req.query.offset);
     let allImgResponse = [];
     const allWeddingPhoto = await Wedding.find({}, { images: 1 });
     const allEventsPhoto = await Event.find({}, { images: 1 });
@@ -54,7 +56,13 @@ app.get("/api/all-images", async (req, res) => {
     allMaternityPhoto.map((item) =>
       item.images.map((it) => allImgResponse.push(it))
     );
-    return res.status(200).json(allImgResponse);
+    if (!req.query.limit) {
+      return res.status(200).json(allImgResponse);
+    }
+    const start = offset * limit;
+    const end = start + limit;
+    const deliveryResponse = allImgResponse.slice(start, end);
+    return res.status(200).json(deliveryResponse);
   } catch (error) {
     console.log(error);
     return res.status(500).json(error);
