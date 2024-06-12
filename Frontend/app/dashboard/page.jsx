@@ -27,7 +27,7 @@ export default async function Dashboard() {
         <div className='border px-[3vmin] py-[1.5vmin] border-neutral-400 rounded-xl shadow-md flex items-start gap-[5vmin] bg-gradient-to-br from-[#9600ff] to-[#aebaf8] max-w-[35vw]'>
           <div className='flex flex-col gap-[2.5vmin]'>
             <p className='text-[3.5vmin] font-semibold text-slate-100'>
-              You have {dashboardData.contact} pending contact requests
+              You have {dashboardData?.contact} pending contact requests
             </p>
             <Link
               href='/dashboard/contact'
@@ -66,7 +66,7 @@ export default async function Dashboard() {
         <div className='border px-[3vmin] py-[1.5vmin] border-neutral-400 rounded-xl shadow-md flex items-start gap-[5vmin] bg-gradient-to-br from-[#9600ff] to-[#aebaf8] max-w-[35vw]'>
           <div className='flex flex-col gap-[2.5vmin]'>
             <p className='text-[3.5vmin] font-semibold text-slate-100'>
-              You have added {dashboardData.wedding} weddings
+              You have added {dashboardData?.wedding} weddings
             </p>
             <Link
               href='/dashboard/wedding'
@@ -105,7 +105,7 @@ export default async function Dashboard() {
         <div className='border px-[3vmin] py-[1.5vmin] border-neutral-400 rounded-xl shadow-md flex items-start gap-[5vmin] bg-gradient-to-br from-[#9600ff] to-[#aebaf8] max-w-[35vw]'>
           <div className='flex flex-col gap-[2.5vmin]'>
             <p className='text-[3.5vmin] font-semibold text-slate-100'>
-              You have added {dashboardData.event} events
+              You have added {dashboardData?.event} events
             </p>
             <Link
               href='/dashboard/events'
@@ -144,7 +144,7 @@ export default async function Dashboard() {
         <div className='border px-[3vmin] py-[1.5vmin] border-neutral-400 rounded-xl shadow-md flex items-start gap-[5vmin] bg-gradient-to-br from-[#9600ff] to-[#aebaf8] max-w-[35vw]'>
           <div className='flex flex-col gap-[2.5vmin]'>
             <p className='text-[3.5vmin] font-semibold text-slate-100'>
-              You have added {dashboardData.portfolio} portfolios
+              You have added {dashboardData?.portfolio} portfolios
             </p>
             <Link
               href='/dashboard/portfolio'
