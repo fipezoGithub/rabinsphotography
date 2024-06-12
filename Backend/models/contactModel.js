@@ -28,6 +28,10 @@ const contactSchema = new mongoose.Schema(
     description: {
       type: String,
     },
+    status: {
+      type: String,
+      required: true,
+    },
   },
   { timestamps: true }
 );

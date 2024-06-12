@@ -17,7 +17,7 @@ export default async function EventDashboard() {
   return (
     <div className='px-[3vmin] flex flex-col items-center gap-[4vmin]'>
       <h1 className='text-[2vmax] font-bold'>
-        Welcome to Rabin&apos;s Photography Dashboard
+        Rabin&apos;s Photography Events Dashboard
       </h1>
       <EventDashBoardComponent events={events} />
     </div>

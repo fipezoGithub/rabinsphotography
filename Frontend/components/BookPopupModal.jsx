@@ -10,11 +10,16 @@ const BookPopupModal = () => {
   const pathname = usePathname();
 
   useEffect(() => {
-    setTimeout(() => {
-      if (!visible) {
+    const modalShown = sessionStorage.getItem("modalShown");
+
+    if (!modalShown) {
+      const timer = setTimeout(() => {
         setVisible(true);
-      }
-    }, 300000);
+        sessionStorage.setItem("modalShown", "true");
+      }, 30000);
+
+      return () => clearTimeout(timer);
+    }
   }, [pathname]);
 
   return (

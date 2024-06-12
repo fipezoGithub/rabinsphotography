@@ -1,5 +1,6 @@
 const Wedding = require("../models/weddingModel");
 const { resizeImage } = require("../utils/resizeImage");
+const { uploadFile, deleteFile } = require("../utils/s3");
 
 async function createNewWedding(req, res) {
   try {
@@ -113,4 +114,5 @@ module.exports = {
   deleteAnWedding,
   updateAWedding,
   getWeddingById,
+  deleteAnWedding,
 };

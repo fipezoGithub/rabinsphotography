@@ -18,6 +18,7 @@ const Event = require("./models/eventModel");
 const BabyAndMaternity = require("./models/babyAndMaternityModel");
 const userRouter = require("./routers/userRouter");
 const reelRouter = require("./routers/reelRouter");
+const dashboardRouter = require("./routers/dashboardRouter");
 
 const app = express();
 app.use(cors());
@@ -38,6 +39,7 @@ app.use("/api/blogs", blogRouter);
 app.use("/api/portfolio", portfolioRouter);
 app.use("/api/user", userRouter);
 app.use("/api/reel", reelRouter);
+app.use("/api/dashboard", dashboardRouter);
 
 app.get("/api/all-images", async (req, res) => {
   try {

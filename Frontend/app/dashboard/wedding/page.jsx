@@ -1,6 +1,5 @@
 import WeddingDashBoardComponent from "@/components/WeddingDashBoardComponent";
 
-
 async function getAllWeddings() {
   try {
     const resp = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URI}/wedding`, {
@@ -19,7 +18,7 @@ export default async function DashWedding() {
   return (
     <div className='px-[3vmin] flex flex-col items-center gap-[4vmin]'>
       <h1 className='text-[2vmax] font-bold'>
-        Welcome to Rabin&apos;s Photography Dashboard
+        Rabin&apos;s Photography Wedding Dashboard
       </h1>
       {<WeddingDashBoardComponent weddings={weddings} />}
     </div>

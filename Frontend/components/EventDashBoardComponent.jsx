@@ -4,7 +4,54 @@ import { IoAdd } from "react-icons/io5";
 import { SiMicrosoft } from "react-icons/si";
 
 const EventDashBoardComponent = ({ events }) => {
+  const [visibleEvents, setVisibleEvents] = useState(events);
   const [isAdding, setIsAdding] = useState(false);
+  const [title, setTitle] = useState("");
+  const [venue, setVenue] = useState("");
+  const [location, setLocation] = useState("");
+  const [eventType, setEventType] = useState("");
+  const [images, setImages] = useState([]);
+
+  async function submitEvent(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    try {
+      const formData = new FormData();
+      formData.append("title", title);
+      formData.append("venuename", venue);
+      formData.append("location", location);
+      formData.append("eventtype", eventType);
+      images.forEach((elm) => formData.append("images", elm));
+      const res = await fetch(
+        `${process.env.NEXT_PUBLIC_SERVER_URI}/event/add`,
+        {
+          method: "POST",
+          body: formData,
+        }
+      );
+      const data = await res.json();
+      setVisibleEvents((prev) => [...prev, data]);
+      setIsAdding(false);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  async function deleteEvent(id) {
+    try {
+      const res = await fetch(
+        `${process.env.NEXT_PUBLIC_SERVER_URI}/event/${id}`,
+        {
+          method: "DELETE",
+        }
+      );
+      const data = await res.json();
+      setVisibleEvents((prev) => prev.filter((it) => it._id !== id));
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
   return (
     <div className='flex flex-col w-full gap-[4vmin]'>
       <ul className='flex flex-wrap text-sm font-medium text-center text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400'>
@@ -55,7 +102,7 @@ const EventDashBoardComponent = ({ events }) => {
               </tr>
             </thead>
             <tbody>
-              {events?.map((item) => (
+              {visibleEvents?.map((item) => (
                 <tr
                   key={item._id}
                   className='odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700 text-[2vmin]'
@@ -73,12 +120,13 @@ const EventDashBoardComponent = ({ events }) => {
                   </td>
                   <td className='px-6 py-4'>{item.images.length}</td>
                   <td className='px-6 py-4'>
-                    <a
-                      href='#'
+                    <button
+                      type='button'
+                      onClick={() => deleteEvent(item._id)}
                       className='font-medium text-red-600 hover:underline'
                     >
                       Delete
-                    </a>
+                    </button>
                   </td>
                 </tr>
               ))}
@@ -87,7 +135,10 @@ const EventDashBoardComponent = ({ events }) => {
         </div>
       ) : (
         <div className='relative overflow-x-auto min-w-[75vmax] self-center'>
-          <form className='max-w-2xl mx-auto flex flex-col'>
+          <form
+            className='max-w-2xl mx-auto flex flex-col'
+            onSubmit={submitEvent}
+          >
             <div className='mb-5'>
               <label
                 htmlFor='title'
@@ -98,6 +149,8 @@ const EventDashBoardComponent = ({ events }) => {
               <input
                 type='text'
                 id='title'
+                value={title}
+                onChange={(e) => setTitle(e.target.value)}
                 className='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500'
                 placeholder='john'
                 required
@@ -113,6 +166,8 @@ const EventDashBoardComponent = ({ events }) => {
               <input
                 type='text'
                 id='venuename'
+                value={venue}
+                onChange={(e) => setVenue(e.target.value)}
                 placeholder='kolkata'
                 className='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500'
                 required
@@ -129,6 +184,8 @@ const EventDashBoardComponent = ({ events }) => {
                 type='text'
                 id='location'
                 placeholder='kolkata'
+                value={location}
+                onChange={(e) => setLocation(e.target.value)}
                 className='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500'
                 required
               />
@@ -143,6 +200,8 @@ const EventDashBoardComponent = ({ events }) => {
               <select
                 id='countries'
                 className='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500'
+                value={eventType}
+                onChange={(e) => setEventType(e.target.value)}
               >
                 <option selected>Choose event type</option>
                 <option value='Birthday_parties'>Birthday Parties</option>
@@ -166,6 +225,9 @@ const EventDashBoardComponent = ({ events }) => {
               <input
                 className='block w-full text-[1.2vmax] text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400'
                 id='multiple_files'
+                onChange={(e) =>
+                  setImages((prev) => [...prev, ...e.target.files])
+                }
                 type='file'
                 multiple
               />
